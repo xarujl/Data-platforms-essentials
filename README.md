@@ -155,11 +155,11 @@ hadoop-lab/
 Например, внутри контейнера долго скачивается hadoop-3.4.0.tar.gz. Можно скачать на ваш компьютер сюда, в папку downloads
 
 ```bash
-# Скопировать локальный архив в контейнер NameNode (на компьютере):
-docker compose cp ~/Downloads/hadoop-3.4.0.tar.gz namenode:~/
+# Скопировать локальный архив в контейнер edge (на компьютере):
+docker compose cp ./downloads/hadoop-3.4.0.tar.gz edge:/tmp/
 
 # Либо через SSH с компьютера на edge:
-scp -i ssh/host_edge -P 2222 ~/Downloads/hadoop-3.4.0.tar.gz team@127.0.0.1:~/
+scp -i ssh/host_edge -P 2222 ./downloads/hadoop-3.4.0.tar.gz team@127.0.0.1:~/
 
 # Уже на edge — передать архив на внутренний узел:
 scp -i ~/.ssh/team_internal /tmp/hadoop-3.4.0.tar.gz team@team-35-nn:~/

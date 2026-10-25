@@ -16,7 +16,6 @@ services:
     volumes:
       - ./ssh/host_edge.pub:/run/keys/authorized.pub:ro
       - ./ssh/team_internal:/run/keys/team_internal:ro
-      - ./downloads:~/downloads:ro
     networks:
       hadoop_net:
         ipv4_address: 10.35.0.10
